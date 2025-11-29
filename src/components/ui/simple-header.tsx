@@ -4,6 +4,7 @@ import { Sheet, SheetContent, SheetFooter } from '@/components/ui/sheet';
 import { Button, buttonVariants } from '@/components/ui/button';
 import { MenuToggle } from '@/components/ui/menu-toggle';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export function SimpleHeader() {
 	const [open, setOpen] = React.useState(false);
@@ -24,10 +25,15 @@ export function SimpleHeader() {
 	];
 
 	return (
-		<header className="z-50 w-full bg-[#272727] background-blur-[35px] fixed py-1">
+		<header className="z-50 w-full bg-[#272727]/80 backdrop-blur-md fixed py-6 ">
 			<nav className="mx-auto flex h-14 w-full max-w-7xl items-center justify-between px-4">
 				<Link href="/" className="flex items-center gap-2">
-					<p className="font-mono text-xl font-bold text-white">BaseBeauty</p>
+					<Image
+						src="/Base_Logo_Simple.svg"
+						alt="BaseBeauty Logo"
+						width={120}
+						height={120}
+					/>
 				</Link>
 				<div className="hidden items-center gap-2 lg:flex">
 					{links.map((link) => (

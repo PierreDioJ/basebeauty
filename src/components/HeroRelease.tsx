@@ -33,7 +33,7 @@ export default function HeroRelease() {
     ];
 
     return (
-        <div className="rounded-xl bg-[#111111] px-6 py-6 text-white max-w-xl w-full flex-1">
+        <div className="rounded-xl bg-[#111111] p-6 text-white max-w-xl w-full flex-1">
             <h1 className="text-6xl font-semibold text-[#00D89F] mb-6">
                 Реализуем все ваши идеи
             </h1>

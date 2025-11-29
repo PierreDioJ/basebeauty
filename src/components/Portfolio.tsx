@@ -2,8 +2,7 @@ import Image from "next/image";
 
 export default function Portfolio() {
     return (
-        <section id="portfolio">
-            <h2 className="text-2xl text-white font-medium pb-10">Портфолио</h2>
+        <section id="portfolio" className="py-10">
             <div className="grid grid-cols-6 grid-rows-8 gap-4 min-h-[900px]">
                 <div className="col-span-4 row-span-3 col-start-1 row-start-1">
                     <div className="group relative h-full w-full overflow-hidden rounded-3xl cursor-pointer transition hover:scale-101">
