@@ -1,4 +1,4 @@
-import React from 'react'; 
+import React from 'react';
 import { Grid2x2PlusIcon } from 'lucide-react';
 import { Sheet, SheetContent, SheetFooter } from '@/components/ui/sheet';
 import { Button, buttonVariants } from '@/components/ui/button';
@@ -37,13 +37,16 @@ export function SimpleHeader() {
 				</Link>
 				<div className="hidden items-center gap-2 lg:flex">
 					{links.map((link) => (
-						<Link
-							key={link.href}
-							className={buttonVariants({className: 'text-white text-[18px] hover:underline' })}
-							href={link.href}
-						>
-							{link.label}
-						</Link>
+						<div className='w-full relative flex'>
+							<Link
+								key={link.href}
+								className={buttonVariants({ className: 'text-white text-xl group relative w-max m-1 bg-transparent hover:bg-transparent' })}
+								href={link.href}
+							>
+								{link.label}
+								<span className='absolute -bottom-1 left-0 w-0 transition-all duration-300 ease-in-out h-0.5 bg-white group-hover:w-full'></span>
+							</Link>
+						</div>
 					))}
 				</div>
 				<Sheet open={open} onOpenChange={setOpen}>
@@ -56,13 +59,13 @@ export function SimpleHeader() {
 						/>
 					</Button>
 					<SheetContent
-						className="bg-background/95 supports-[backdrop-filter]:bg-background/80 gap-0 backdrop-blur-lg"
+						className="bg-background/95 supports-backdrop-filter:bg-background/80 gap-0 backdrop-blur-lg"
 						showClose={false}
 						side="left"
 					>
 						<div className="grid gap-y-2 overflow-y-auto px-4 pt-12 pb-5">
 							{links.map((link) => (
-								<a
+								<Link
 									className={buttonVariants({
 										variant: 'ghost',
 										className: 'justify-start',
@@ -70,7 +73,7 @@ export function SimpleHeader() {
 									href={link.href}
 								>
 									{link.label}
-								</a>
+								</Link>
 							))}
 						</div>
 					</SheetContent>

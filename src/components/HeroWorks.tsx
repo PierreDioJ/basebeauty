@@ -1,6 +1,7 @@
 import { AspectRatio } from "./ui/aspect-ratio";
 import Image from "next/image";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 export default function HeroWorks() {
     return (
@@ -41,9 +42,9 @@ export default function HeroWorks() {
                         </AspectRatio>
 
                     </div>
-                    <Button className="mt-4 w-full rounded-full border-2 border-[#00D89F] py-2 text-center text-xl font-semibold text-white hover:bg-[#00D89F] hover:text-black transition-colors">
+                    <Link href="/works" className="mt-4 w-full rounded-full border-2 border-[#00D89F] py-2 text-center text-xl font-semibold text-white hover:bg-[#00D89F] hover:text-black transition-colors">
                         Ещё работы
-                    </Button>
+                    </Link>
                 </div>
             </div>
         </div>

@@ -1,6 +1,8 @@
+import Contact from "@/components/Contact";
 import Hero from "@/components/Hero";
 import Portfolio from "@/components/Portfolio";
 import Services from "@/components/Services";
+import WorkMap from "@/components/WorkMap";
 
 export default function Home() {
   return (
@@ -8,6 +10,8 @@ export default function Home() {
       <Hero />
       <Portfolio />
       <Services />
+      <WorkMap />
+      <Contact />
     </main>
   );
 }
