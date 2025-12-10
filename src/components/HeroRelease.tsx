@@ -1,6 +1,7 @@
 import { Clock, ClockArrowUp, Flame, Gem, Users } from "lucide-react";
 import HeroAdvantage from "./HeroAdvantage";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 export default function HeroRelease() {
     
@@ -33,13 +34,14 @@ export default function HeroRelease() {
     ];
 
     return (
-        <div className="rounded-xl bg-[#111111] p-6 text-white max-w-xl w-full flex-1">
-            <h1 className="text-6xl font-semibold text-[#00D89F] mb-6">
-                Реализуем все ваши идеи
-            </h1>
+        <div className="rounded-4xl bg-[#111111] pt-4 sm:pt-6 text-white w-full flex-1 flex flex-col min-h-[500px] sm:min-h-[600px] gap-4">
+            <div className="px-6">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-[#00D89F] mb-4 sm:mb-6">
+                    Реализуем все ваши идеи
+                </h1>
 
-            <div className="flex flex-col gap-6">
-                <div className="flex gap-4">
+                <div className="flex-grow flex flex-col gap-4 sm:gap-6">
+                <div className="flex gap-2 sm:gap-4 flex-col sm:flex-row">
                     <ul className="flex flex-1 flex-col gap-3">
                         <HeroAdvantage {...advantages[0]} />
                         <HeroAdvantage {...advantages[2]} />
@@ -52,14 +54,23 @@ export default function HeroRelease() {
 
                 <div className="flex justify-center">
                     <ul>
-                        <HeroAdvantage {...advantages[4]} />
+                        <li className="flex w-full items-start justify-between rounded-xl bg-[#222222] px-6 py-3 text-white">
+                            <div className="space-y-1 pr-4">
+                                <h3 className="text-2xl font-semibold leading-snug">{advantages[4].title}</h3>
+                                <p className="text-sm leading-snug text-[#E4E4E4]">{advantages[4].description}</p>
+                            </div>
+                            <div className="mt-1 flex items-start justify-end text-white">
+                                {advantages[4].icon}
+                            </div>
+                        </li>
                     </ul>
                 </div>
-
-                <Button className="mt-3 w-full rounded-full border-2 border-[#00D89F] py-2 text-center text-xl font-semibold text-white hover:bg-[#00D89F] hover:text-black transition-colors">
-                    Отправить бриф
-                </Button>
             </div>
+            </div>
+
+            <Link href="#contact" className="w-full mt-auto rounded-full border-2 border-[#00D89F] py-3 sm:py-4 text-center text-lg sm:text-xl font-semibold text-white hover:bg-[#00D89F] hover:text-black transition-colors">
+                Отправить бриф
+            </Link>
         </div>
     );
 }

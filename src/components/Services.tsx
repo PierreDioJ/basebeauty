@@ -23,14 +23,14 @@ export default function Services() {
 
 
     return (
-        <section id="services" className="py-10">
-            <h2 className="text-6xl text-white font-medium p-3 text-center bg-black rounded-3xl max-w-3xl mb-10 bg-[url('/servicebg.png')] bg-cover">Наши услуги</h2>
-            <div className="grid grid-cols-[2fr_1fr] gap-15">
-                <div className="flex flex-col gap-10">
+        <section id="services" className="py-10 px-4 lg:px-8">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl text-white font-medium p-3 text-center bg-black rounded-2xl sm:rounded-3xl max-w-3xl mb-8 sm:mb-10 bg-[url('/servicebg.png')] bg-cover">Наши услуги</h2>
+            <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-8 lg:gap-15">
+                <div className="flex flex-col gap-6 sm:gap-8 lg:gap-10 justify-between">
                     <ServiceBlockProductivity title="ПРОИЗВОДСТВО" />
                     <ServiceBlockDesign title="ДИЗАЙН" />
                 </div>
-                <div>
+                <div className="hidden lg:block">
                     <video
                         ref={videoRef}
                         src="/service.webm"

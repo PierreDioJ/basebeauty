@@ -35,3 +35,24 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 # basebeauty
+
+## Other Editors Configuration
+
+### Manual Figma MCP Server Configuration
+
+Other code editors and tools that support SSE (Server-Sent Events) can also connect to the Figma MCP server.
+
+1. **Check SSE Support**: Check your editor's documentation to confirm it supports SSE-based communication
+2. **Manual Configuration**: If it does, you can manually add the Figma MCP server using this configuration:
+
+```json
+{
+  "mcpServers": {
+    "Figma Desktop": {
+      "url": "http://127.0.0.1:3845/mcp"
+    }
+  }
+}
+```
+
+Add this configuration to your editor's MCP settings file or configuration panel.

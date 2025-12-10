@@ -6,7 +6,7 @@ import WorkMap from "@/components/WorkMap";
 
 export default function Home() {
   return (
-    <main className="mx-auto flex h-14 w-full max-w-7xl px-4 flex-col gap-4 pt-20">
+    <main className="mx-auto flex w-full max-w-7xl px-4 flex-col gap-4 pt-20">
       <Hero />
       <Portfolio />
       <Services />
